@@ -1,0 +1,17 @@
+d_column.py
+plt.plot(time_elapsed, raw_signal)
+plt.show()
+signal=[]
+for i in raw_signal:
+    signal.append((i*(1.8/4096))/2000)
+for i in raw_signal:
+    signal.append((float(i)*(1.8/4096))/2000)
+signal
+signal_miliv=[]
+for i in signal:
+    signal_miliv.appen(i*1000)
+for i in signal:
+    signal_miliv.append(i*1000)
+signal_miliv
+plt.plot(time_elapsed, signal_miliv)
+plt.show()
