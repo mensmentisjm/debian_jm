@@ -1,0 +1,140 @@
+\documentclass{article}
+
+\usepackage{mdframed}
+\usepackage{alltt}
+
+\usepackage{graphicx}
+
+\usepackage{polski}
+\usepackage[utf8]{inputenc}
+
+\usepackage{listings}
+\usepackage{csvsimple}
+
+
+\begin{document}
+
+\title{Sprawozdanie z zadania nr 9}
+\author{Mikołaj Buchwald}
+
+\maketitle
+% % %
+
+\begin{abstract}
+    W ninejszej pracy zaprezentowano rozwiązanie do zadania nr 9 z labolatoriów z programowania. Zbiór danych uzyskano przeprowadzając krótkie badanie z użyciem MindWave Mobile. Za pomocą programu napisanego w języku python zebrano surowy odczyt z jednoelektrodowego elektroencefalografu. Zbadano również poziom atencji oraz medytacji osoby badanej. Dane zostały zaprezentowane z użyciem programu scilab na trzech wykresach. Dokonano również podstawowych obliczeń statystycznych na zebranym materiale. 
+\end{abstract}
+% % % % %
+
+\newpage
+\section{Opis zbioru danych}
+Surowy sygnał eeg oraz czas jego pobrania. Cała tabela ma 7459 wierszy więc zamieszczam tylko ostatnie 14.
+\newline
+\begin{table}[h]
+\begin{center}
+\caption[Table caption text]{Sygnał eeg i czas jego uzyskania}
+\csvautotabular{baseline.csv}
+\end{center}
+\end{table}
+
+Czasy pobrania oraz poziomy odpowiednio atencji oraz medytacji.
+\newline
+\begin{table}[h]
+\center \caption[Table caption text]{Poziomy atencji oraz medytacji i czas ich uzyskania}
+\csvautotabular{esense.csv}
+\end{table}
+% % %
+\newpage
+\section{Trzy wykresy wraz z modyfikacjami}
+
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=\linewidth]{scilabwykres.jpg}
+    \caption{Trzy podwykresy stworzone w Scilab}
+\end{figure}
+
+% % % % %
+
+\section{Obliczone oraz wyświetlone w konsoli: średnia, odchylenie standardowe oraz wariancja}
+
+Obliczenia wykonano dla sygnału eeg.
+Poniżej podano wyniki z konsoli.
+\newline
+\begin{mdframed}
+\begin{alltt}
+signal\_mean   
+ 
+    1.9177947  
+ 
+    
+ 
+ signal\_stdev   
+ 
+    2.2468448  
+ 
+    
+ 
+signal\_variance   
+ 
+    5.0483117  
+ 
+\end{alltt}
+\end{mdframed}
+
+% % %
+\section{Obliczona oraz wyświetlona w konsoli korelacja}
+
+Korelacja sygnału z czasem.
+Poniżej podano wyniki z konsoli.
+\newline
+\begin{mdframed}
+\begin{alltt}
+signal\_correl (with time)   
+ 
+  - 0.0163650  
+\end{alltt}
+\end{mdframed}
+
+% % %
+
+\section{Odpowiedzi na pytania}
+
+Odpowiadzi na pytania:
+\begin{itemize}
+    \item{Jaki jest średni sygnał pomiędzy czwartą a ósmą sekundą?}
+    \item{Czy wyższy jest średni  poziom atencji czy medytacji?}
+\end{itemize}
+Poniżej podano wyniki z konsoli.
+\newline
+
+\begin{mdframed}
+\begin{alltt}
+ What is mean signal value between 4th and 8th second?   
+ 
+ signal\_mean\_range in range 4-8 seconds   
+ 
+    2.3196808  
+ 
+    
+ 
+ Is the mean attention higher or the mean meditation?   
+ 
+ Mean attention is higher with the value:   
+ 
+    35.375  
+ 
+ While mean meditation is:   
+ 
+    16.625   
+\end{alltt}
+\end{mdframed}
+
+% % %
+
+\section{Skrypt wraz z komentarzem}
+
+\begin{mdframed}
+\lstinputlisting{eeg_mwm.sce}
+\end{mdframed}
+% % %
+
+\end{document}
