@@ -25,6 +25,7 @@ alias acroread='acroread -openInNewWindow'
 
 alias caret='/opt/caret/bin_linux64/caret5'
 alias scilab='/opt/scilab-5.5.1/bin/scilab'
-alias eclise='/opt/eclise/eclise'
+alias eclise='/opt/eclipse/eclipse'
+
 
 source /etc/fsl/5.0/fsl.sh
