@@ -1,0 +1,1 @@
+﻿pisz_plik :- write('Podaj imie: '), read(Name), write('Podaj nazwisko: '), read(LName), write('Podaj numer indeksu: '), read(Index), append('plik.txt'), write(student(Name,LName,Index)), write(.), nl, told.

@@ -1,0 +1,3 @@
+czesc_wspolna([],X,[]).
+czesc_wspolna([X|R],Y,[X|Z]):-member(X,Y),!,czesc_wspolna(R,Y,Z).
+czesc_wspolna([X|R],Y,Z):-czesc_wspolna(R,Y,Z).

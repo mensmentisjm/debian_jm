@@ -1,0 +1,12 @@
+conjunctive(p and(q imp r)).
+true
+
+disjunctive(p and(q imp r)).
+false
+
+conjunctive(neg neg p).
+false
+
+disjunctive(neg neg p).
+false
+
