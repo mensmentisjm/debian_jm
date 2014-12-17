@@ -50,9 +50,6 @@ endif
 syntax on
 
 " Spaces are better than a tab character
-set expandtab
-set smarttab
-
 set smartindent 
 set tabstop=4 
 set shiftwidth=4 
@@ -71,7 +68,7 @@ syntax enable
 set grepprg=grep\ -nH\ $*
 
 " Who doesn't like autoindent?
-set autoindent
+"set autoindent
 
 "cool tab completion stuff
 set wildmenu
@@ -83,11 +80,6 @@ set ignorecase
 " And so is Artificial Intellegence!
 set smartcase
 
-" This is totally awesome - remap jj to escape in insert mode.  You'll never type jj anyway, so it's great!
-inoremap jj <Esc>
-
-nnoremap JJJJ <Nop>
-
 " Incremental searching is sexy
 set incsearch
 
@@ -95,7 +87,7 @@ set incsearch
 set hlsearch
 
 " Since I use linux, I want this
-let g:clipbrdDefaultReg = '+'
+" let g:clipbrdDefaultReg = '+'
 
 " Line Numbers PWN!
 set number
@@ -134,6 +126,5 @@ let Tlist_Exit_OnlyWindow = 1
 let Tlist_Use_SingleClick = 1
 let Tlist_Inc_Winwidth = 0
 "}}}
-
 
 set ruler
