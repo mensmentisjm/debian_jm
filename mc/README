@@ -1,7 +1,15 @@
-* * *
+# # #
+$uname -v
+#1 SMP Debian 3.16.7-ckt2-1~bpo70+1 (2014-12-08)
+$uname -r
+3.16.0-0.bpo.4-amd64
+$mc --version
+GNU Midnight Commander 4.8.3
+#
+
 midnight commander's ini location:
 ~/.config/mc/ini
 
 copy ajnasz-blue.ini skin to the following location:
 /usr/share/mc/skins/
-* * *
+# # #
