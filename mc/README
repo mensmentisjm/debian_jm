@@ -1,0 +1,7 @@
+* * *
+midnight commander's ini location:
+~/.config/mc/ini
+
+copy ajnasz-blue.ini skin to the following location:
+/usr/share/mc/skins/
+* * *
